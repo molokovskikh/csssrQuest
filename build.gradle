@@ -1,0 +1,23 @@
+group 'com.csssr'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+compileJava.options.encoding = compileTestJava.options.encoding = "UTF-8"
+sourceCompatibility = 1.8
+
+ext {
+    spring_boot_version = '2.0.1.RELEASE'
+}
+
+mainClassName="com.csssr.Application"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.springframework.boot:spring-boot-starter:${spring_boot_version}"
+    testCompile "org.springframework.boot:spring-boot-starter-test:${spring_boot_version}"
+}
